@@ -3,8 +3,8 @@ import React from "react";
 const ContactPage = () => {
   return (
     <div>
-      <section className="p-8 text-center bg-gradient-to-r from-orange-100 to-secondary lg:p-20">
-        <h1 className="mb-2 text-2xl font-bold text-gray-700 lg:text-5xl">
+      <section className="p-8 text-center bg-contact lg:p-20">
+        <h1 className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-neutral-500 py-4">
           Nous Contactez pour plus d&apos;informations
         </h1>
       </section>
