@@ -8,9 +8,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400"
+            className="text-xl font-bold text-gray-800 md:text-2xl hover:text-primary"
           >
-            Real Estate
+            Dormz
           </Link>
           <div className="flex md:hidden">
             <button
@@ -29,26 +29,20 @@ const Navigation = () => {
         </div>
 
         <div className="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-          <Link href="/" className="text-sm text-gray-800 hover:text-blue-400">
-            Home
+          <Link href="/" className="text-sm text-gray-800 hover:text-primary">
+            Accueil
           </Link>
           <Link
-            href="/properties"
-            className="text-sm text-gray-800 hover:text-blue-400"
+            href="/biens"
+            className="text-sm text-gray-800 hover:text-primary"
           >
-            Properties
+            Découvrir
           </Link>
           <Link
-            href="/single-property"
-            className="text-sm text-gray-800 hover:text-blue-400"
+            href="/contact"
+            className="text-sm text-gray-800 hover:text-primary"
           >
-            Single Properties
-          </Link>
-          <Link
-            href="/contact-us"
-            className="text-sm text-gray-800 hover:text-blue-400"
-          >
-            Contact Us
+            Nous Contactez
           </Link>
         </div>
       </nav>

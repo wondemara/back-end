@@ -29,11 +29,11 @@ const Services = (props: Props) => {
     <section className="bg-white">
       <div className="px-6 py-16 mx-auto max-w-7xl">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-center text-blue-600 lg:text-4xl">
+          <h1 className="text-2xl font-bold text-center text-primary lg:text-4xl">
             Our Services
           </h1>
           <div className="flex justify-center">
-            <div className="w-40 h-1 bg-indigo-400 rounded"></div>
+            <div className="w-40 h-1 bg-primary rounded"></div>
           </div>
         </div>
 

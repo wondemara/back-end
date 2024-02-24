@@ -15,7 +15,7 @@ const ProductCard = (props: Props) => {
           Modern Design villa
         </h4>
         <div className="mt-2">
-          <span className="text-xl font-extrabold text-blue-600">$3000.00</span>{" "}
+          <span className="text-xl font-extrabold text-primary">$3000.00</span>{" "}
           /M
         </div>
         <div className="flex mt-2">
