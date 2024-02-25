@@ -1,9 +1,14 @@
-import React from "react";
+import { prisma } from "@/db/prisma";
 import ProductCard from "./ProductCard";
-
 type Props = {};
 
-const AllProductsA = (props: Props) => {
+const AllProductsA = async (props: Props) => {
+  const biens = await prisma.property.findMany({
+    orderBy: {
+      price: "desc",
+    },
+    take: 3,
+  });
   return (
     <section className="px-4 py-4 bg-gray-100 lg:px-32 lg:py-20">
       <div className="">
@@ -12,9 +17,9 @@ const AllProductsA = (props: Props) => {
         </h1>
       </div>
       <div className="mt-4 space-x-0 space-y-2 lg:flex lg:flex-nowrap lg:space-x-4 lg:space-y-0 lg:mt-20">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {biens.map((property) => (
+          <ProductCard key={property.id} property={property} />
+        ))}
       </div>
     </section>
   );

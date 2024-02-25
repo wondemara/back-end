@@ -1,10 +1,12 @@
+import { gellAllProperty } from "@/db/query/biens.query";
 import ProductCard from "@/ui/components/ProductCard";
 import SearchSection from "@/ui/components/SearchSection";
 import React from "react";
 
 type Props = {};
 
-const BiensPage = (props: Props) => {
+const BiensPage = async (props: Props) => {
+  const biens = await gellAllProperty();
   return (
     <div>
       <section className="p-8 text-center bg-biens bg-cover lg:p-20">
@@ -17,13 +19,9 @@ const BiensPage = (props: Props) => {
 
       <section className="px-4 py-4 bg-gray-100 lg:px-20 lg:py-8">
         <div className="mt-4 space-y-2 lg:gap-4 lg:flex lg:items-center lg:flex-wrap lg:mt-20">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {biens.map((bien) => (
+            <ProductCard key={bien.id} property={bien} />
+          ))}
         </div>
       </section>
     </div>

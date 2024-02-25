@@ -1,21 +1,28 @@
+import { PropertyQueryType } from "@/db/query/biens.query";
+import Image from "next/image";
 import React from "react";
 
-type Props = {};
+type Props = {
+  property: PropertyQueryType;
+};
 
-const ProductCard = (props: Props) => {
+const ProductCard = ({ property }: Props) => {
   return (
-    <div className="p-4 bg-white rounded-lg">
-      <img
-        src="https://images.unsplash.com/photo-1601760562234-9814eea6663a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    <div className="p-4 bg-white rounded-lg ">
+      <Image
+        width={500}
+        height={250}
+        className="w-full h-full "
+        src={property.imageUrl}
         alt="property"
       />
 
       <div className="p-6">
-        <h4 className="text-2xl font-bold cursor-pointer">
-          Modern Design villa
-        </h4>
+        <h4 className="text-2xl font-bold cursor-pointer">{property.title}</h4>
         <div className="mt-2">
-          <span className="text-xl font-extrabold text-primary">$3000.00</span>{" "}
+          <span className="text-xl font-extrabold text-primary">
+            ${property.price}
+          </span>{" "}
           /M
         </div>
         <div className="flex mt-2">
@@ -102,7 +109,8 @@ const ProductCard = (props: Props) => {
             <path d="M0 16L3 5V1a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4l3 11v5a1 1 0 0 1-1 1v2h-1v-2H2v2H1v-2a1 1 0 0 1-1-1v-5zM19 5h1V1H4v4h1V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h2V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1zm0 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V6h-2v2a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6H3.76L1.04 16h21.92L20.24 6H19zM1 17v4h22v-4H1zM6 4v4h4V4H6zm8 0v4h4V4h-4z"></path>
           </svg>
           <p>
-            <span className="font-bold text-gray-900">3</span> Bedrooms
+            <span className="font-bold text-gray-900">{property.rooms}</span>{" "}
+            Chambres
           </p>
         </div>
         <div className="flex items-center">
@@ -117,7 +125,8 @@ const ProductCard = (props: Props) => {
             ></path>
           </svg>
           <p>
-            <span className="font-bold text-gray-900">2</span> Bathrooms
+            <span className="font-bold text-gray-900">{property.floors}</span>{" "}
+            Etages
           </p>
         </div>
       </div>

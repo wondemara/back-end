@@ -13,7 +13,7 @@ const ContactPage = () => {
         <div className="flex items-center justify-center bg-gray-100">
           <div className="w-full px-6 py-16 bg-white rounded-lg shadow-2xl lg:w-2/5">
             <h2 className="mb-4 text-xl antialiased font-semibold text-center text-gray-800">
-              Send Us a Message
+              Envoyez un message
             </h2>
             <form className="mx-8 space-y-8">
               <div>
