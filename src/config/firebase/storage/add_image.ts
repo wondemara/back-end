@@ -9,7 +9,6 @@ const add_image = async (imageFile: File) => {
       const url = getDownloadURL(storageRef).then(async (url) => {
         return url;
       });
-
       return url;
     });
     return imageUrl;

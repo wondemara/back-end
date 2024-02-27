@@ -17,8 +17,8 @@ const BiensPage = async (props: Props) => {
 
       <SearchSection />
 
-      <section className="px-4 py-4 bg-gray-100 lg:px-20 lg:py-8">
-        <div className="mt-4 space-y-2 lg:gap-4 lg:flex lg:items-center lg:flex-wrap lg:mt-20">
+      <section className="px-4  max-w-screen-3xl mx-auto py-4  lg:px-20 lg:py-8">
+        <div className="mt-4 space-y-2 lg:gap-4 justify-center lg:flex lg:items-center lg:flex-wrap lg:mt-20">
           {biens.map((bien) => (
             <ProductCard key={bien.id} property={bien} />
           ))}

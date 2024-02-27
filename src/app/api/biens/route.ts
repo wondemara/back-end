@@ -13,7 +13,6 @@ const propertyScheme = z.object({
   caution: z.string(),
   postal_code: z.string(),
   city: z.string(),
-  sold: z.string(),
 });
 
 export async function POST(request: Request) {

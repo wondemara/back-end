@@ -6,7 +6,7 @@ const propertyScheme = z.object({
   quartier: z.string(),
   adresse: z.string(),
   price: z.string(),
-  image: z.instanceof(File).nullable(),
+  imageUrl: z.instanceof(FileList).nullable(),
   rooms: z.string(),
   floors: z.string(),
   caution: z.string(),

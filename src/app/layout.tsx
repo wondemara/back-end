@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/ui/components/Footer";
 import Navigation from "@/ui/components/Navigation";
 import { SITECONFIG } from "@/config/site/siteConfig";
+import { Providers } from "@/context/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navigation />
-        <div className="mx-auto ">{children}</div>
-        <Footer />
+        <Providers>
+          <Navigation />
+          <div className="mx-auto ">{children}</div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

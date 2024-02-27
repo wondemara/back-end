@@ -6,7 +6,7 @@ const Inscription = ({ data }: { data: any }) => {
   try {
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then((userCredential) => {
-        Ajouter({ ...data, uid: userCredential.user.uid });
+        Ajouter({data : { data, "uid": userCredential.user.uid }});
         // ...
       })
       .catch((error) => {

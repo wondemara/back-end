@@ -1,5 +1,6 @@
 "use server";
 
+import add_image from "@/config/firebase/storage/add_image";
 import { prisma } from "@/db/prisma";
 import { Authaction } from "@/lib/next-safe-action";
 import { revalidatePath } from "next/cache";

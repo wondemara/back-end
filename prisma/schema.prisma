@@ -31,4 +31,17 @@ model Property {
 
   createdAt DateTime  @default(now())
   updatedAt DateTime? @updatedAt
+
+  Contact Contact[]
+}
+
+model Contact {
+  id         String  @id @default(cuid())
+  email      String
+  name       String
+  phone      String?
+  message    String?
+  propertyId String?
+
+  property Property? @relation(fields: [propertyId], references: [id])
 }
